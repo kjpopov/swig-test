@@ -1,0 +1,90 @@
+# Go specific
+/bin/
+/pkg/
+/*.test
+/*.prof
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# C/C++ specific
+*.o
+*.a
+*.so
+*.out
+*.dll
+
+# Compiled binary files
+*.bin
+swig-test
+# Air tmp bin
+/tmp/*
+
+# Build directories
+/build/
+/CMakeFiles/
+/CMakeScripts/
+/CMakeCache.txt
+*.cmake
+/CMakeDoxyfile.in
+/Testing/
+/Debug/
+/Release/
+*.suo
+*.user
+*.user.*
+*.sln.docstates
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.user.*
+*.sdf
+*.opensdf
+*.sdf.cache
+*.pdb
+
+# Dependencies
+/vendor/
+/Godeps/
+/vendor/
+/vendor.json
+
+# IDE-specific files
+.vscode/
+.idea/
+*.sln.docstates
+
+# Go module files
+/go.sum
+
+# Compiled Go binary
+*.exe
+
+# Compiled test binary
+*.test
+
+# macOS specific files
+.DS_Store
+
+# Linux desktop files
+*.desktop
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Visual Studio Code settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Text editor backup and autosave files
+*~
+
+# Compiled CMake files
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
