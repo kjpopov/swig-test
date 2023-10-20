@@ -19,8 +19,12 @@ SWIG_GO_FILE := $(SWIG_DIR)/example.go
 
 .PHONY: gen
 
+lib:
+	g++ -c -fPIC -I$(SWIG_DIR)/include $(SWIG_DIR)/src/example.cpp -o $(SWIG_DIR)/src/example.o
+	g++ -shared $(SWIG_DIR)/src/example.o -o $(SWIG_DIR)/libexample.so
+
 gen:
-	swig -go -c++ $(SWIG_SRCS)
+	swig -c++ -go $(SWIG_SRCS)
 
 build:
 	go build

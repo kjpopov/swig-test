@@ -220,13 +220,13 @@ static void* Swig_malloc(int c) {
 }
 
 
-#include "example.cpp"
+#include <include/example.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void _wrap_Swig_free_example_ab2607d7ccddb863(void *_swig_go_0) {
+void _wrap_Swig_free_example_d948b2c821a774c5(void *_swig_go_0) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&_swig_go_0; 
@@ -236,7 +236,7 @@ void _wrap_Swig_free_example_ab2607d7ccddb863(void *_swig_go_0) {
 }
 
 
-void *_wrap_Swig_malloc_example_ab2607d7ccddb863(intgo _swig_go_0) {
+void *_wrap_Swig_malloc_example_d948b2c821a774c5(intgo _swig_go_0) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -249,7 +249,7 @@ void *_wrap_Swig_malloc_example_ab2607d7ccddb863(intgo _swig_go_0) {
 }
 
 
-intgo _wrap_Math_add_example_ab2607d7ccddb863(Math *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2) {
+intgo _wrap_Math_add_example_d948b2c821a774c5(Math *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2) {
   Math *arg1 = (Math *) 0 ;
   int arg2 ;
   int arg3 ;
@@ -266,7 +266,7 @@ intgo _wrap_Math_add_example_ab2607d7ccddb863(Math *_swig_go_0, intgo _swig_go_1
 }
 
 
-Math *_wrap_new_Math_example_ab2607d7ccddb863() {
+Math *_wrap_new_Math_example_d948b2c821a774c5() {
   Math *result = 0 ;
   Math *_swig_go_result;
   
@@ -277,7 +277,7 @@ Math *_wrap_new_Math_example_ab2607d7ccddb863() {
 }
 
 
-void _wrap_delete_Math_example_ab2607d7ccddb863(Math *_swig_go_0) {
+void _wrap_delete_Math_example_d948b2c821a774c5(Math *_swig_go_0) {
   Math *arg1 = (Math *) 0 ;
   
   arg1 = *(Math **)&_swig_go_0; 

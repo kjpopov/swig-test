@@ -27,11 +27,11 @@ typedef struct { char *p; intgo n; } _gostring_;
 typedef struct { void* array; intgo len; intgo cap; } _goslice_;
 
 
-extern void _wrap_Swig_free_example_ab2607d7ccddb863(uintptr_t arg1);
-extern uintptr_t _wrap_Swig_malloc_example_ab2607d7ccddb863(swig_intgo arg1);
-extern swig_intgo _wrap_Math_add_example_ab2607d7ccddb863(uintptr_t arg1, swig_intgo arg2, swig_intgo arg3);
-extern uintptr_t _wrap_new_Math_example_ab2607d7ccddb863(void);
-extern void _wrap_delete_Math_example_ab2607d7ccddb863(uintptr_t arg1);
+extern void _wrap_Swig_free_example_d948b2c821a774c5(uintptr_t arg1);
+extern uintptr_t _wrap_Swig_malloc_example_d948b2c821a774c5(swig_intgo arg1);
+extern swig_intgo _wrap_Math_add_example_d948b2c821a774c5(uintptr_t arg1, swig_intgo arg2, swig_intgo arg3);
+extern uintptr_t _wrap_new_Math_example_d948b2c821a774c5(void);
+extern void _wrap_delete_Math_example_d948b2c821a774c5(uintptr_t arg1);
 #undef intgo
 */
 import "C"
@@ -65,13 +65,13 @@ type _ sync.Mutex
 
 func Swig_free(arg1 uintptr) {
 	_swig_i_0 := arg1
-	C._wrap_Swig_free_example_ab2607d7ccddb863(C.uintptr_t(_swig_i_0))
+	C._wrap_Swig_free_example_d948b2c821a774c5(C.uintptr_t(_swig_i_0))
 }
 
 func Swig_malloc(arg1 int) (_swig_ret uintptr) {
 	var swig_r uintptr
 	_swig_i_0 := arg1
-	swig_r = (uintptr)(C._wrap_Swig_malloc_example_ab2607d7ccddb863(C.swig_intgo(_swig_i_0)))
+	swig_r = (uintptr)(C._wrap_Swig_malloc_example_d948b2c821a774c5(C.swig_intgo(_swig_i_0)))
 	return swig_r
 }
 
@@ -89,19 +89,19 @@ func (arg1 SwigcptrMath) Add(arg2 int, arg3 int) (_swig_ret int) {
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (int)(C._wrap_Math_add_example_ab2607d7ccddb863(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_intgo(_swig_i_2)))
+	swig_r = (int)(C._wrap_Math_add_example_d948b2c821a774c5(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_intgo(_swig_i_2)))
 	return swig_r
 }
 
 func NewMath() (_swig_ret Math) {
 	var swig_r Math
-	swig_r = (Math)(SwigcptrMath(C._wrap_new_Math_example_ab2607d7ccddb863()))
+	swig_r = (Math)(SwigcptrMath(C._wrap_new_Math_example_d948b2c821a774c5()))
 	return swig_r
 }
 
 func DeleteMath(arg1 Math) {
 	_swig_i_0 := getSwigcptr(arg1)
-	C._wrap_delete_Math_example_ab2607d7ccddb863(C.uintptr_t(_swig_i_0))
+	C._wrap_delete_Math_example_d948b2c821a774c5(C.uintptr_t(_swig_i_0))
 }
 
 type Math interface {

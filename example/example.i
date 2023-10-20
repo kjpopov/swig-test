@@ -3,8 +3,8 @@
 %module example
 
 %{
-#include "example.cpp"
+#include <include/example.h>
 %}
 
-%include "example.cpp"
+%include <include/example.h>
 
