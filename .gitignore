@@ -88,3 +88,6 @@ Thumbs.db
 CMakeFiles/
 CMakeCache.txt
 CMakeScripts/
+
+# binary
+main

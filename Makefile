@@ -1,7 +1,7 @@
 # Makefile
 
 # Set the output binary name
-BINARY_NAME := swig-test
+BINARY_NAME := main
 
 # Set the directories
 SRC_DIR := .
@@ -23,11 +23,17 @@ lib:
 	g++ -c -fPIC -I$(SWIG_DIR)/include $(SWIG_DIR)/src/example.cpp -o $(SWIG_DIR)/src/example.o
 	g++ -shared $(SWIG_DIR)/src/example.o -o $(SWIG_DIR)/libexample.so
 
-gen:
+gen: lib
 	swig -c++ -go -use-shlib -soname libexample.so $(SWIG_SRCS)
 
-build:
-	CGO_CPPFLAGS="-I$(SWIG_DIR)/include" CGO_LDFLAGS="-L$(SWIG_DIR) -l$(SWIG_DIR)" go build
+build: gen
+	CGO_CPPFLAGS="-I$(SWIG_DIR)/include" CGO_LDFLAGS="-L$(SWIG_DIR) -l$(SWIG_DIR)" go build -o $(BINARY_NAME)
+
+run: build
+	LD_LIBRARY_PATH=$(SWIG_DIR) ./$(BINARY_NAME)
+
+air: build
+	LD_LIBRARY_PATH=$(SWIG_DIR) air
 
 all: lib gen build
 
