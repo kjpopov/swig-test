@@ -1,0 +1,4 @@
+*.go
+*.so
+*.o
+*_wrap.cxx
