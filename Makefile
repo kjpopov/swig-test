@@ -24,14 +24,16 @@ lib:
 	g++ -shared $(SWIG_DIR)/src/example.o -o $(SWIG_DIR)/libexample.so
 
 gen:
-	swig -c++ -go $(SWIG_SRCS)
+	swig -c++ -go -use-shlib -soname libexample.so $(SWIG_SRCS)
 
 build:
-	go build
+	CGO_CPPFLAGS="-I$(SWIG_DIR)/include" CGO_LDFLAGS="-L$(SWIG_DIR) -l$(SWIG_DIR)" go build
 
-all: gen build
+all: lib gen build
 
 clean:
 	rm -f $(BINARY_NAME)
 	rm -f $(SWIG_WRAPPER)
 	rm -f $(SWIG_GO_FILE)
+	rm -f $(SWIG_DIR)/src/example.o
+	rm -f $(SWIG_DIR)/libexample.so
